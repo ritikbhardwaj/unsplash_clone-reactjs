@@ -1,0 +1,29 @@
+input[type='text'] {
+	width: 70%;
+	height: 38px;
+	border-radius: 4px;
+	border: none;
+	font-size: 20px;
+	padding: 10px;
+}
+
+.jumbotron {
+	height: 12rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+}
+
+p {
+	font-size: 30px;
+	color: white;
+}
+
+.formGroup {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}

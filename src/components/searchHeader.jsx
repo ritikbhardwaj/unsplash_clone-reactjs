@@ -1,0 +1,55 @@
+import React from 'react';
+import './stylesheets/searchHeader.css';
+
+class searchHeader extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			value: ''
+		};
+	}
+
+	handleChange = event => {
+		this.setState({ value: event.target.value });
+	};
+
+	// handleClick = () => {
+	// 	console.log('Clicked!');
+	// 	console.log(this.state.value);
+	// };
+
+	getButtonClasses = () => {
+		let classes = 'btn  ml-4  btn-';
+		classes += this.state.value ? 'Light bg-light' : 'Dark bg-dark';
+		return classes;
+	};
+	render() {
+		return (
+			<div className='jumbotron'>
+				<p>
+					Search from thousands of royalty free pictures by{' '}
+					<b>
+						<u>Unsplash</u>
+					</b>
+				</p>
+				<div className='formGroup'>
+					<input
+						type='text'
+						value={this.state.value}
+						onChange={this.handleChange}
+						palceholder='kittens'
+					></input>
+					<button
+						onClick={() => this.props.onSubmit(this.state.value)}
+						className={this.getButtonClasses()}
+						disabled={this.state.value ? false : true}
+					>
+						Search
+					</button>
+				</div>
+			</div>
+		);
+	}
+}
+
+export default searchHeader;

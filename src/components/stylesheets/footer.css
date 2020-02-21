@@ -1,0 +1,8 @@
+.footer {
+	margin: 0px;
+	background-color: rgba(0, 0, 0);
+}
+.footer > h6,
+h5 {
+	color: white;
+}
