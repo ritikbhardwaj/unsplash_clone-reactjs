@@ -3,8 +3,10 @@ input[type='text'] {
 	height: 38px;
 	border-radius: 4px;
 	border: none;
-	font-size: 20px;
 	padding: 10px;
+	outline: none;
+	border-radius: 30px;
+	padding-left: 15px;
 }
 
 .jumbotron {
@@ -13,12 +15,11 @@ input[type='text'] {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: black;
 }
 
 p {
 	font-size: 30px;
-	color: white;
+	color: black;
 }
 
 .formGroup {

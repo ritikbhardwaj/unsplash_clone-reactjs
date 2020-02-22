@@ -8,15 +8,23 @@ class Results extends React.Component {
 	}
 
 	render() {
+		if (this.props.images.length === 0) {
+			return <h1 style={{ textAlign: 'center' }}>No results found!</h1>;
+		}
 		return (
 			<div className='results'>
 				{this.props.images.map(image => {
 					return (
-						<img
-							alt={image.alt_description}
-							key={image.id}
-							src={image.urls.regular}
-						></img>
+						<div key={image.id} className='image'>
+							<img alt={image.alt_description} src={image.urls.regular}></img>
+							<div className='profile'>
+								<img
+									src={image.user.profile_image.small}
+									style={{ width: 30, height: 'auto', borderRadius: '50%' }}
+								></img>
+								<h6>{image.user.name}</h6>
+							</div>
+						</div>
 					);
 				})}
 			</div>

@@ -5,7 +5,7 @@ class searchHeader extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			value: ''
+			value: 'dog'
 		};
 	}
 
@@ -20,7 +20,7 @@ class searchHeader extends React.Component {
 
 	getButtonClasses = () => {
 		let classes = 'btn  ml-4  btn-';
-		classes += this.state.value ? 'Light bg-light' : 'Dark bg-dark';
+		classes += this.state.value ? 'secondary bg-dark' : 'light';
 		return classes;
 	};
 	render() {
@@ -37,7 +37,6 @@ class searchHeader extends React.Component {
 						type='text'
 						value={this.state.value}
 						onChange={this.handleChange}
-						palceholder='kittens'
 					></input>
 					<button
 						onClick={() => this.props.onSubmit(this.state.value)}

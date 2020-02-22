@@ -30,7 +30,7 @@ class App extends React.Component {
 
 	componentDidMount = async () => {
 		let response = await this.getImages('dog', 1);
-		// console.log(response);
+		console.log(response);
 		this.setState({ arr: response.data.results, loading: false });
 	};
 
