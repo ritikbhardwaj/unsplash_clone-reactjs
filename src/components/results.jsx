@@ -9,7 +9,12 @@ class Results extends React.Component {
 
 	render() {
 		if (this.props.images.length === 0) {
-			return <h1 style={{ textAlign: 'center' }}>No results found!</h1>;
+			return (
+				<div className='loader-container'>
+					<div className='loader'></div>
+					<p>Loading</p>
+				</div>
+			);
 		}
 		return (
 			<div className='results'>
@@ -17,8 +22,14 @@ class Results extends React.Component {
 					return (
 						<div key={image.id} className='image'>
 							<img alt={image.alt_description} src={image.urls.regular}></img>
+							<div className='overlay'></div>
+							<button className='btn  btn-sm bg-light bg-light'>⤓</button>
+							<div className='likes badge  badge-light'>
+								{image.likes} Likes
+							</div>
 							<div className='profile'>
 								<img
+									alt=''
 									src={image.user.profile_image.small}
 									style={{ width: 30, height: 'auto', borderRadius: '50%' }}
 								></img>

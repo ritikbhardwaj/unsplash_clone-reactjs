@@ -25,13 +25,7 @@ class searchHeader extends React.Component {
 	};
 	render() {
 		return (
-			<div className='jumbotron'>
-				<p>
-					Search from thousands of royalty free pictures by{' '}
-					<b>
-						<u>Unsplash</u>
-					</b>
-				</p>
+			<div className='header jumbotron'>
 				<div className='formGroup'>
 					<input
 						type='text'

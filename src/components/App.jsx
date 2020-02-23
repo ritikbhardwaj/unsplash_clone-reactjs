@@ -19,8 +19,9 @@ class App extends React.Component {
 
 	getImages = async (query, page) => {
 		console.log(this.state);
+		this.setState({ arr: [] });
 		const response = await Axios.get('https://api.unsplash.com/search/photos', {
-			params: { query, per_page: 21, page, orientation: 'landscape' },
+			params: { query, per_page: 21, page },
 			headers: {
 				Authorization: 'Client-ID y-KsfJBqb_iZfZO12bN7fqEWsrAdGbQoJAUwN-soUns'
 			}
@@ -29,13 +30,13 @@ class App extends React.Component {
 	};
 
 	componentDidMount = async () => {
-		let response = await this.getImages('dog', 1);
+		let response = await this.getImages('dog', Math.random() * 200);
 		console.log(response);
-		this.setState({ arr: response.data.results, loading: false });
+		this.setState({ arr: response.data.results });
 	};
 
 	handleSubmit = async (value, page) => {
-		let response = await this.getImages(value, page);
+		let response = await this.getImages(value, Math.random() * 200);
 		this.setState({
 			arr: response.data.results
 		});
