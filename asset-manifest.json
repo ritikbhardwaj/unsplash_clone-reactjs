@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/unsplash_clone-reactjs/static/css/main.17ffac91.chunk.css",
+    "main.css": "/unsplash_clone-reactjs/static/css/main.7e7da532.chunk.css",
     "main.js": "/unsplash_clone-reactjs/static/js/main.bf274b00.chunk.js",
     "main.js.map": "/unsplash_clone-reactjs/static/js/main.bf274b00.chunk.js.map",
     "runtime-main.js": "/unsplash_clone-reactjs/static/js/runtime-main.3bfe6945.js",
@@ -9,17 +9,17 @@
     "static/js/2.62179776.chunk.js": "/unsplash_clone-reactjs/static/js/2.62179776.chunk.js",
     "static/js/2.62179776.chunk.js.map": "/unsplash_clone-reactjs/static/js/2.62179776.chunk.js.map",
     "index.html": "/unsplash_clone-reactjs/index.html",
-    "precache-manifest.886324e398ee4e0b929907cc2d0290d3.js": "/unsplash_clone-reactjs/precache-manifest.886324e398ee4e0b929907cc2d0290d3.js",
+    "precache-manifest.7a2dc009abc58ab6d4ce7da71fc8fe10.js": "/unsplash_clone-reactjs/precache-manifest.7a2dc009abc58ab6d4ce7da71fc8fe10.js",
     "service-worker.js": "/unsplash_clone-reactjs/service-worker.js",
     "static/css/2.67123b20.chunk.css.map": "/unsplash_clone-reactjs/static/css/2.67123b20.chunk.css.map",
-    "static/css/main.17ffac91.chunk.css.map": "/unsplash_clone-reactjs/static/css/main.17ffac91.chunk.css.map",
+    "static/css/main.7e7da532.chunk.css.map": "/unsplash_clone-reactjs/static/css/main.7e7da532.chunk.css.map",
     "static/js/2.62179776.chunk.js.LICENSE.txt": "/unsplash_clone-reactjs/static/js/2.62179776.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3bfe6945.js",
     "static/css/2.67123b20.chunk.css",
     "static/js/2.62179776.chunk.js",
-    "static/css/main.17ffac91.chunk.css",
+    "static/css/main.7e7da532.chunk.css",
     "static/js/main.bf274b00.chunk.js"
   ]
 }
