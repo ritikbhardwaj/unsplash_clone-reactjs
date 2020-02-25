@@ -1,9 +1,5 @@
 # Unsplash (Clone) using React.js
 
-![Alt Text](./src/assets/unsplash-clone.gif)
-
-### Note: Gif may be old. Run the project to see newest changes
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
