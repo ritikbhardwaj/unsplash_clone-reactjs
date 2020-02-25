@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ca56699f343bafc0a5fc6823947bf564",
+    "revision": "2b9eed35f141e3bbca844aeae89164b6",
     "url": "/unsplash_clone-reactjs/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/unsplash_clone-reactjs/static/css/2.67123b20.chunk.css"
   },
   {
-    "revision": "359ee8aaab48b9fccd48",
-    "url": "/unsplash_clone-reactjs/static/css/main.bdcb0690.chunk.css"
+    "revision": "e011036ae2054c5f97fe",
+    "url": "/unsplash_clone-reactjs/static/css/main.66cfab55.chunk.css"
   },
   {
     "revision": "4c804c18b09f98d75d50",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/unsplash_clone-reactjs/static/js/2.62179776.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "359ee8aaab48b9fccd48",
-    "url": "/unsplash_clone-reactjs/static/js/main.bf274b00.chunk.js"
+    "revision": "e011036ae2054c5f97fe",
+    "url": "/unsplash_clone-reactjs/static/js/main.77a40c00.chunk.js"
   },
   {
     "revision": "1fea286ac2764cce6659",
