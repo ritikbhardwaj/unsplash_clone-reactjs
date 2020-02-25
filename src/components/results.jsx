@@ -8,11 +8,18 @@ class Results extends React.Component {
 	}
 
 	render() {
-		if (this.props.images.length === 0) {
+		if (this.props.images.length === 0 && this.props.timeOut === false) {
 			return (
 				<div className='loader-container'>
 					<div className='loader'></div>
 					<p>Loading</p>
+				</div>
+			);
+		} else if (this.props.timeOut === true && this.props.images.length === 0) {
+			return (
+				<div className='loader-container not-found'>
+					<h2>Sorry, no results found!</h2>
+					<p>Your internet may be slow.</p>
 				</div>
 			);
 		}

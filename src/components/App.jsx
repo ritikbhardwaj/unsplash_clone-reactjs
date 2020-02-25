@@ -13,12 +13,13 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			arr: []
+			arr: [],
+			timeOut: false
 		};
 	}
 
 	getImages = async (query, page) => {
-		console.log(this.state);
+		// console.log(this.state);
 		this.setState({ arr: [] });
 		const response = await Axios.get('https://api.unsplash.com/search/photos', {
 			params: { query, per_page: 21, page },
@@ -31,12 +32,22 @@ class App extends React.Component {
 
 	componentDidMount = async () => {
 		let response = await this.getImages('dog', Math.random() * 200);
-		console.log(response);
+		// console.log(response);
 		this.setState({ arr: response.data.results });
 	};
 
 	handleSubmit = async (value, page) => {
+		this.setState({ timeOut: false });
 		let response = await this.getImages(value, Math.random() * 200);
+		let timeOut = new Promise((resolve, reject) => {
+			setTimeout(() => {
+				resolve();
+			}, 5000);
+		});
+
+		timeOut.then(() => {
+			this.setState({ timeOut: true });
+		});
 		this.setState({
 			arr: response.data.results
 		});
@@ -46,7 +57,11 @@ class App extends React.Component {
 		return (
 			<div className='App container-fluid'>
 				<SearchHeader onSubmit={this.handleSubmit} />
-				<Results images={this.state.arr} onLoad={this.setLoadingFalse} />
+				<Results
+					images={this.state.arr}
+					onLoad={this.setLoadingFalse}
+					timeOut={this.state.timeOut}
+				/>
 				<Footer />
 			</div>
 		);
