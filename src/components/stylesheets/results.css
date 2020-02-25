@@ -64,9 +64,13 @@ img {
 	display: flex;
 }
 
+.image .profile:hover {
+	color: white;
+	text-decoration: underline;
+}
+
 .image:hover .overlay {
 	display: block;
-	z-index: -10;
 }
 
 .image:hover button.btn {
@@ -81,10 +85,9 @@ img {
 	background: radial-gradient(
 		circle,
 		rgba(238, 174, 202, 0) 0%,
-		rgba(0, 0, 0, 0.6012780112044818) 100%
+		rgba(0, 0, 0, 0.3) 100%
 	);
 	display: none;
-	z-index: -1;
 }
 
 .image .likes {
@@ -106,12 +109,12 @@ img {
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
-	z-index: 5;
 	display: none;
 	cursor: pointer;
 	width: 40px;
 	font-size: 1em;
 	font-weight: bolder;
+	z-index: 100;
 }
 
 /* .image button:hover {
@@ -128,6 +131,7 @@ img {
 	left: 0;
 	padding-left: 10px;
 	display: none;
+	cursor: pointer;
 
 	/* background: linear-gradient(
 		0deg,
@@ -147,7 +151,7 @@ img {
 	border-radius: 50%;
 	width: 30px;
 	height: 30px;
-	animation: spin 1.5s linear infinite;
+	animation: spin 2s linear infinite;
 }
 
 .loader-container {
@@ -167,4 +171,13 @@ img {
 	font-size: 15px;
 	margin-left: 20px;
 	margin-bottom: 0;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

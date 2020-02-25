@@ -31,7 +31,7 @@ class App extends React.Component {
 	};
 
 	componentDidMount = async () => {
-		let response = await this.getImages('dog', Math.random() * 200);
+		let response = await this.getImages('dog', 1);
 		// console.log(response);
 		this.setState({ arr: response.data.results });
 	};

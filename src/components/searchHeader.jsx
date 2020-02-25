@@ -31,6 +31,11 @@ class searchHeader extends React.Component {
 						type='text'
 						value={this.state.value}
 						onChange={this.handleChange}
+						onKeyUp={e => {
+							if (e.keyCode == 13) {
+								this.props.onSubmit(this.state.value);
+							}
+						}}
 					></input>
 					<button
 						onClick={() => this.props.onSubmit(this.state.value)}

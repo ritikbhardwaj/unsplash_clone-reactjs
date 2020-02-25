@@ -30,7 +30,15 @@ class Results extends React.Component {
 						<div key={image.id} className='image'>
 							<img alt={image.alt_description} src={image.urls.regular}></img>
 							<div className='overlay'></div>
-							<button className='btn  btn-sm btn-light'>⤓</button>
+							<button
+								className='btn  btn-sm btn-light'
+								onClick={() => {
+									console.log('clicked!');
+									window.open(image.urls.raw, '_newtab');
+								}}
+							>
+								&darr;
+							</button>
 							<div className='likes badge badge-light'>{image.likes} Likes</div>
 							<div className='profile'>
 								<img
@@ -38,7 +46,16 @@ class Results extends React.Component {
 									src={image.user.profile_image.small}
 									style={{ width: 30, height: 'auto', borderRadius: '50%' }}
 								></img>
-								<h6>{image.user.name}</h6>
+								<h6
+									onClick={() => {
+										window.open(
+											'https://www.unsplash.com/@' + image.user.username,
+											'_newtab'
+										);
+									}}
+								>
+									{image.user.name}
+								</h6>
 							</div>
 						</div>
 					);
