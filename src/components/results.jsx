@@ -30,10 +30,8 @@ class Results extends React.Component {
 						<div key={image.id} className='image'>
 							<img alt={image.alt_description} src={image.urls.regular}></img>
 							<div className='overlay'></div>
-							<button className='btn  btn-sm bg-light bg-light'>⤓</button>
-							<div className='likes badge  badge-light'>
-								{image.likes} Likes
-							</div>
+							<button className='btn  btn-sm btn-light'>⤓</button>
+							<div className='likes badge badge-light'>{image.likes} Likes</div>
 							<div className='profile'>
 								<img
 									alt=''
